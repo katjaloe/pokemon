@@ -131,10 +131,13 @@ h1 {
     margin: auto auto 10px auto;
   }
 
-
+  h1 {
+    margin-bottom: 20px;
+  }
 
   .container {
     display: block;
     flex-direction: column;
+    padding-top: 35px;
   }
 }
