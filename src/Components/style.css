@@ -23,7 +23,7 @@ body {
 
 .left-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 300px));
   grid-gap: 2rem;
 }
 
@@ -110,4 +110,31 @@ h1 {
   background-color: #408e9142;
   border-radius: 10px;
 
+}
+
+@media only screen and (max-width: 480px){
+  .card {
+    width: 150px;
+    font-size: 14px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding: 5px auto;
+    /* box-sizing: border-box; */
+  }
+
+  .card h2:first-child {
+    margin: 10px auto auto auto;
+  }
+
+  .card h2:last-child {
+    margin: auto auto 10px auto;
+  }
+
+
+
+  .container {
+    display: block;
+    flex-direction: column;
+  }
 }
