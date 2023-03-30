@@ -133,11 +133,20 @@ h1 {
 
   h1 {
     margin-bottom: 20px;
+
   }
 
   .container {
     display: block;
     flex-direction: column;
     padding-top: 35px;
+  }
+
+  .right-content h2 {
+    font-size: 24px;
+  }
+
+  .right-content {
+    margin-top: 70px;
   }
 }
