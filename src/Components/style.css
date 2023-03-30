@@ -12,6 +12,7 @@ body {
 .container {
   width: 90%;
   margin: auto;
+  margin-bottom: 20px;
   padding-top: 100px;
   display: flex;
 }
@@ -22,27 +23,28 @@ body {
 
 .left-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   grid-gap: 2rem;
 }
 
 .card {
   width: 300px;
   background-color: #408E91;
-  border-radius: 15px;
-  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .right-content {
   width: 50%;
   text-align: center;
   color: black;
   position: fixed;
-  top: 100px;
+  top: 170px;
   right: 10px;
 }
 
@@ -51,7 +53,8 @@ body {
   height: 160px;
 }
 
-.right-content h1 {
+.right-content h2 {
+  font-size: 32px;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
@@ -69,8 +72,8 @@ body {
 .abilities .group {
   background-color: #408E91;
   color: white;
-  padding: 6px;
-  border-radius: 15px;
+  padding: 15px;
+  border-radius: 10px;
   font-size: 12px;
   margin-bottom: 15px;
 }
@@ -83,12 +86,28 @@ body {
 .btn-group button {
   outline: none;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   width: 150px;
   padding: 6px;
   margin: 10px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #408E91;
-  color: white;
+  background-color: #408e9142;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #408E91;
+  font-size: 48px;
+}
+
+.no-pokemon-chosen {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #408e9142;
+  border-radius: 10px;
+
 }

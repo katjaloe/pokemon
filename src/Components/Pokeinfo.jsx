@@ -1,25 +1,41 @@
 import React from "react";
 
-const Pokeinfo=()=>{
+const Pokeinfo=({data})=>{
+  // console.log(data)
   return(
     <>
-      <h1>Charmander</h1>
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/4.png" alt="" />
-      <div className="abilities">
-        <div className="group">
-          <h2>blaze</h2>
-        </div>
-        <div className="group">
-          <h2>solar-power</h2>
-        </div>
-      </div>
-      <div className="base-stat">
-        <h3>Hp:30</h3>
-        <h3>attack:52</h3>
-        <h3>defense:43</h3>
-        <h3>special-attack:50</h3>
-        <h3>Speed</h3>
-      </div>
+      {
+        (!data)? <h2 class="no-pokemon-chosen" >Click a card on the left</h2> :
+        <>
+           <h2>{data.name}</h2>
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png` } alt="" />
+          <div className="abilities">
+            {
+              data.abilities.map(poke=> {
+                return (
+                  <>
+                    <div className="group">
+                      <h3>{poke.ability.name}</h3>
+                    </div>
+                  </>
+                )
+              })
+            }
+          </div>
+          <div className="base-stat">
+            {
+              data.stats.map(poke=> {
+                return (
+                  <>
+                    <h4>{poke.stat.name}: {poke.base_stat}</h4>
+                  </>
+                )
+              })
+            }
+
+          </div>
+        </>
+      }
     </>
   )
 }
