@@ -66,6 +66,9 @@ const Main = () => {
           <Pokeinfo data={pokeDex} />
         </div>
       </div>
+      <div className="code-info">
+        <a href="https://github.com/katjaloe/pokemon" target="_blank" rel="noreferrer noopener">Open-source code,</a> by Katja Löffler, built with the <a href="https://pokeapi.co/" target="_blank" rel="noreferrer noopener">Pokéapi.</a>
+      </div>
     </>
   );
 };

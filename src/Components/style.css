@@ -160,3 +160,13 @@ h1 {
     justify-content: space-around;
   }
 }
+
+.code-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.code-info a {
+  color: #408E91;
+  text-decoration: none;
+}
